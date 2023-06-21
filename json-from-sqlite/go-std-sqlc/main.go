@@ -13,7 +13,7 @@ import (
 var schema string
 
 func main() {
-	db, err := sql.Open("sqlite3", "file:bench.db?cache=shared&mode=rwc")
+	db, err := sql.Open("sqlite3", "file:db?mode=memory&cache=shared")
 	if err != nil {
 		panic(err)
 	}
